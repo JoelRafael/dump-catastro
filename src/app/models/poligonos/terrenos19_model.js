@@ -44,7 +44,9 @@ const land19 = async () => {
           LEFT JOIN catastro.forma f ON f.id = t.forma
           LEFT JOIN catastro.material_via m ON m.id = t.material_via
           LEFT JOIN catastro.tipo_via tv ON tv.id = t.via
-          LEFT JOIN catastro.caracter_titular c ON c.id = t.via`
+          LEFT JOIN catastro.caracter_titular c ON c.id = t.via
+          LIMIT 500
+          `
   );
   return result;
 };
