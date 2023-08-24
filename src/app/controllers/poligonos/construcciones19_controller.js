@@ -7,5 +7,4 @@ const getBuilding = async (req, res = response) => {
   const result = await building19();
   return defaultSucces(res, result, "", 200);
 };
-
 module.exports = { getBuilding };
