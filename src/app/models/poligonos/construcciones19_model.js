@@ -4,6 +4,8 @@ const sequelize = require("../../database/conexion");
 const building19 = async () => {
   const [result, metadata] = await sequelize.query(
     `SELECT c.id,
+            c.cod,
+            c.codigo,
             c.aire,
             c.anyo,
             c.ascensores,
@@ -35,6 +37,8 @@ const getByCodigo = async (value) => {
     `SELECT 
             JSONB_BUILD_OBJECT(
               'id',                  c.id,
+              'cod',                 c.cod,
+              'codigo',              c.codigo,
               'aire',                c.aire,
               'anyo',                c.anyo,
               'ascensores',          c.ascensores,
