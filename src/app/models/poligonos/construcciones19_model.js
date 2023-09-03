@@ -13,7 +13,7 @@ const building19 = async () => {
             c.cod,
             c.dormitorios,
             c.escalera,
-            c.geom,
+            c.geom geometry,
             c.lavanderia,
             c.plantas,
             c.sanitarios,

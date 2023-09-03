@@ -37,7 +37,7 @@ const land19 = async () => {
           m.valor,
           tv.tipo,
           tv.valor valortipovia,
-          t.geom
+          t.geom geometry
           FROM catastro.terrenos19 t 
           JOIN catastro.titular ti ON t.titular = ti.id
           JOIN catastro.adquisicion ad ON ad.id = ti.adquisicion
