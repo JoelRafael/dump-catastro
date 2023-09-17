@@ -24,11 +24,10 @@ const save = async (prop) => {
 
 const searchbyDocument = async (document, id) => {
     const [result, metadata] = await sequelize.query(
-      `SELECT nombre FROM catastro.titular t WHERE t.documento = :document AND t.id =:id`,
+      `SELECT nombre FROM catastro.titular t WHERE t.documento = :document`,
       {
           replacements: {
-              document: document,
-              id: id
+              document: document
           },
       }
     );

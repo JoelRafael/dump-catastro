@@ -10,10 +10,10 @@ const saveTitular = async (req, res = response) => {
   if (JSON.stringify(req.body) === "{}")
     return defaulMessage(res, "Tienes que enviar un titular", 400);
 
-    const titular = await searchbyDocument(req.body.documento, req.body.id);
-    
-  if (titular)
-    return defaulMessage(res, "Titular existente con este terreno", 400);
+    const titular = await searchbyDocument(req.body.documento);
+    console.log(titular)
+  if (titular.length != 0)
+    return defaulMessage(res, "Titular existente", 400);
 
   const data = await save(req.body);
   return defaultSucces(res, "Titular guardado con exito", 201);
