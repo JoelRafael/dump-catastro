@@ -11,7 +11,7 @@ const saveTitular = async (req, res = response) => {
     return defaulMessage(res, "Tienes que enviar un titular", 400);
 
     const titular = await searchbyDocument(req.body.documento);
-    console.log(titular)
+    
   if (titular.length != 0)
     return defaulMessage(res, "Titular existente", 400);
 
